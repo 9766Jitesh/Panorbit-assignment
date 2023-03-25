@@ -2,6 +2,7 @@
 import React, { useContext, useEffect } from "react";
 import { AppContest } from "../contextApi/contextApi"
 import "./dashboardRightTop.css"
+import LogedInProfile from "./LogedInProfile" ;
 
 export default function DashboardRightTop() {
     const { profileData, setShowProfile, showProfile, getFilterData } =
@@ -22,8 +23,8 @@ export default function DashboardRightTop() {
         <img src={profileData[0]?.profilepicture} alt="profile img" />
         <p>{profileData[0]?.name}</p>
       </div>
-      {/* -------- (Profile details component)----- */}
-      {/* <ProfileDetails /> */}
+      {/* -------- dashboard profile-card----- */}
+      <LogedInProfile></LogedInProfile>
     </div>
   );
 }
