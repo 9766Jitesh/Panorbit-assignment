@@ -6,7 +6,7 @@
     background: #ffffff;
     cursor: pointer;
 }
-.users-profile-container{
+div.users-profile{
     display: flex;
     margin-top: 0px;
     align-items: center;
@@ -14,3 +14,20 @@
     margin: 0px;
     padding: 0px;
 }
+div.users-profile img{
+    border-radius: 50px;
+    width: 35px;
+    margin: 0px;
+    padding: 0px;
+}
+div.users-profile p{
+    font-weight: 400;
+    font-size: 17px;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(56, 53, 53);
+}
+
+.user-profile > p:hover {
+    color: rgb(158, 56, 56);
+  }

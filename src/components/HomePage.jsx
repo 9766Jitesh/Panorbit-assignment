@@ -7,7 +7,7 @@ export default function HomePage() {
     <div className='homePage-container'>
       <div className='card-home'>
         <h1 className='card-top'>Select an account</h1>
-        
+        <GetUser></GetUser>
       </div>
     </div>
   )

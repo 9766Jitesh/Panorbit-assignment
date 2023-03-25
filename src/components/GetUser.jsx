@@ -2,6 +2,7 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AppContest } from "../contextApi/contextApi";
+import "./getUser.css"
 
 export default function GetUser() {
     const { data, loading, error, getAllData } = useContext(AppContest); // getting data from contest api
@@ -29,7 +30,7 @@ export default function GetUser() {
             <NavLink
               to={`/homepage/${el.id}`}
             > 
-              <div className='users-profile-container'>
+              <div className='users-profile'>
                 <img src={el.profilepicture} alt="profile image" />
                 <p>{el.name}</p>
               </div>
