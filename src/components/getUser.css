@@ -1,0 +1,16 @@
+.card-bottom{
+    margin-top: 0px;
+    padding: 0px 30px;
+    height: 400px;
+    overflow-x: auto;
+    background: #ffffff;
+    cursor: pointer;
+}
+.users-profile-container{
+    display: flex;
+    margin-top: 0px;
+    align-items: center;
+    gap: 20px;
+    margin: 0px;
+    padding: 0px;
+}
