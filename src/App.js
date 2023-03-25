@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './components/HomePage';
 import ContestProvider from './contextApi/contextApi';
 import { RouterProvider, Routes, Route } from 'react-router-dom';
+import ProfileDashboard from './components/ProfileDashboard';
 
   function App() {
     return (
@@ -11,7 +12,7 @@ import { RouterProvider, Routes, Route } from 'react-router-dom';
           <Routes>
 
             <Route path="/homepage" element={<HomePage />} />
-            <Route path="/homepage/:id" element={<HomePage />} />
+            <Route path="/homepage/:id" element={<ProfileDashboard />} />
           </Routes>
         </ContestProvider>
       </div>

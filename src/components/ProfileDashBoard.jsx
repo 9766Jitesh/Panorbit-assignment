@@ -1,14 +1,19 @@
 import React, { useContext } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { AppContest } from "../contextApi/contextApi";
+import DashboardBottom from "./DashboardBottom";
+import DashboardLeft from "./DashboardLeft";
+import DashboardRightTop from "./DashboardRightTop";
+import "./profileDashboard.css"
 
-export default function ProfileDashBoard() {
+export default function ProfileDashboard() {
     const { profileData, getFilterData, setShowProfile, showProfile } =
     useContext(AppContest); // getting data from contest api
   const { id } = useParams();
   sessionStorage.setItem("id", id);
 
-  // ------------ (fetching data with param id)---------
+  // ------------ fetching data with param id---------
   useEffect(() => {
     let ID = sessionStorage.getItem("id") || 1;
     getFilterData(ID);
@@ -16,27 +21,27 @@ export default function ProfileDashBoard() {
 
   return (
     <div>
-      <div className={style.HomeMain}>
-        {/* ------------ (Left navbar)---------- */}
-        <LeftNav />
-        {/* ----------- (Right part)------------- */}
+      <div className="dashboard-container">
+        {/* ------------dashboard-left---------- */}
+        <DashboardLeft />
+        {/* ----------- dashboard-right -------------*/}
         {profileData &&
           profileData.map((el) => (
             <div
               style={{ width: "80%" }}
-              className={style.profile_top}
+              className='dashboard-right'
               key={el.id}
             >
-              {/* ---------- top nav------- */}
-              <div className={style.profile}>
+              {/* ---------- dashboard- right -top------ */}
+              <div className="dashboard-right-top" >
                 <h2>Profile</h2>
-                <TopNav />
+                <DashboardRightTop />
               </div>
 
               <hr />
-              {/* ------------- (bottom)------------- */}
+              {/* ------------- dashboard-right- bottom------------- */}
               <div onClick={() => setShowProfile(false)}>
-                <ProfileBottom {...el} />
+                <DashboardBottom {...el} />
               </div>
             </div>
           ))}
