@@ -1,4 +1,5 @@
 import React from 'react'
+import Chat from './Chat';
 import "./dashboardBottom.css"
  const DashboardBottom = (props) => {
         const {
@@ -82,7 +83,7 @@ import "./dashboardBottom.css"
         marginWidth="0"
       ></iframe>
       {/* ---------- (geo)--------- */}
-      <div className="Geo">
+      <div className="geo">
         <p>
           Lat : <span>{address.geo.lat}</span>
         </p>
@@ -92,7 +93,7 @@ import "./dashboardBottom.css"
       </div>
      {/* ------------- (chat) ---------- */}
      <div>
-      {/* <Chat /> */}
+      <Chat />
     </div>
     </div>
   </div>

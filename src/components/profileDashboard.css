@@ -47,7 +47,7 @@ width: 93%;
   .dashboard-right-top > h2 {
     color: rgb(67, 65, 65);
   }
-  /* ---------------- Profile ----------- */
+  /* ---------------- dashboard-right-top----------- */
   .dashboard-right-top {
     display: flex;
     align-items: center;

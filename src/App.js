@@ -11,7 +11,7 @@ import ProfileDashboard from './components/ProfileDashboard';
         <ContestProvider>
           <Routes>
 
-            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/homepage/:id" element={<ProfileDashboard />} />
           </Routes>
         </ContestProvider>
